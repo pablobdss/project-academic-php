@@ -18,9 +18,5 @@ if (isset($_POST['submit_login'])) {
     } else {
         $mensagemErro = "Credenciais incorretas. Tente novamente.";
     }
-
 }
 ?>
-
-
-
