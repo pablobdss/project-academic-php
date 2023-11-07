@@ -22,5 +22,6 @@ if (!isset($_SESSION['logado'])) {
         <li><a href="verificar_reservas.php">Verificar Reservas</a></li>
     </ul>
     <p>teste</p>
+    <p>teste</p>
 </body>
 </html>
