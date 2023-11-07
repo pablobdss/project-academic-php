@@ -21,5 +21,6 @@ if (!isset($_SESSION['logado'])) {
         <li><a href="cancelar_reserva.php">Cancelar Reserva</a></li>
         <li><a href="verificar_reservas.php">Verificar Reservas</a></li>
     </ul>
+    <p>teste</p>
 </body>
 </html>
