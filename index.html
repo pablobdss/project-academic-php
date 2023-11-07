@@ -11,25 +11,19 @@
         <h1>The Grooming Studio</h1>
         <h2>Sistema de Agendamento e Consulta de horários</h2>
         
-        <form method="post">
+        <form action="login.php" method="post"> <!-- Adicionei o atributo action e o valor "login.php" para enviar os dados para o arquivo PHP -->
             <div>
                 <label for="usuario">Usuário:</label>
-                <input type="text" id="usuario" name="usuario" required>
+                <input type="text" id="usuario" name="usuario" placeholder="Seu Usuário" required>
             </div>
             <div>
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Sua Senha" required>
             </div>
             <div>
                 <button type="submit" name="submit_login">Entrar</button>
             </div>
         </form>
-
-        <!-- <?php
-        if (isset($mensagemErro)) {
-            echo '<p>' . $mensagemErro . '</p>';
-        }
-        ?> -->
     </div>
 </body>
 </html>
