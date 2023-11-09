@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>The Grooming Studio</h1>
+        <h2>Sistema de Agendamento e Consulta de horários</h2>
+        
+        <form action="login.php" method="post"> <!-- Adicionei o atributo action e o valor "login.php" para enviar os dados para o arquivo PHP -->
+            <div>
+                <label for="usuario">Usuário:</label>
+                <input type="text" id="usuario" name="usuario" placeholder="Seu Usuário" required>
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" placeholder="Sua Senha" required>
+            </div>
+            <div>
+                <button type="submit" name="submit_login">Entrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
