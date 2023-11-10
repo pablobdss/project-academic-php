@@ -1,26 +1,15 @@
 <?php
-session_start();
+    // Inicia ou retoma a sessão
+    session_start();
 
-if (!isset($_SESSION['logado'])) {
-    header('Location: login.php');
-    exit;
-}
+    // Verifica se as variáveis de sessão para e-mail e senha não estão definidas
+    if(!isset($_SESSION['email']) || !isset($_SESSION['password'])) {
+        // Redireciona para a página de login se o usuário não estiver logado
+        header('Location: ../../../project-academic-php/pages/login/index.html');
+        exit; // Garante a interrupção da execução do script após o redirecionamento
+    } else {
+        // Redireciona para a página do menu se o usuário estiver logado
+        header('Location: ../../../project-academic-php/pages/menu/index.html');
+        exit; // Garante a interrupção da execução do script após o redirecionamento
+    }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-</head>
-<body>
-    <h1> Menu de Opções </h1>
-    <ul>
-        <li><a href="realizar_reserva.php">Realizar Reserva de Horário</a></li>
-        <li><a href="cancelar_reserva.php">Cancelar Reserva</a></li>
-        <li><a href="verificar_reservas.php">Verificar Reservas</a></li>
-    </ul>
-
-</body>
-</html>
