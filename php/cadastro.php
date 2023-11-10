@@ -11,5 +11,8 @@ if(isset($_POST['submit_cadastro'])){
 
         $result = mysqli_query($conexao, "INSERT INTO usuarios (nome, password, email, telefone, sexo, data_nasc) 
         VALUES('$nome', '$password', '$email', '$telefone', '$sexo', '$data_nasc')");
+
+        header('Location: ../../../project-academic-php/index.html');
+        exit;
     }
 ?>
