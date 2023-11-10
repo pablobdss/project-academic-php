@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Login</title>
 </head>
 <body>
@@ -14,14 +15,14 @@
         <form action="login.php" method="post"> <!-- Adicionei o atributo action e o valor "login.php" para enviar os dados para o arquivo PHP -->
             <div>
                 <label for="email">E-mail</label>
-                <input type="text" id="usuario" name="email" placeholder="E-mail" required>
+                <input type="text" id="usuario" name="email" placeholder="E-mail" class="input-field" required>
             </div>
             <div>
                 <label for="senha">Senha:</label>
-                <input type="password" id="senha" name="senha" placeholder="Sua Senha" required>
+                <input type="password" id="senha" name="senha" placeholder="Sua Senha" class="input-field" required>
             </div>
             <div>
-                <button type="submit" name="submit_login">Entrar</button>
+                <button type="submit" name="submit_login" class="submit-button">Entrar</button>
             </div>
         </form>
     </div>
