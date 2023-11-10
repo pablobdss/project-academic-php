@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <title>Cadastro</title>
 </head>
 <body>
@@ -11,24 +12,25 @@
         <h1>The Grooming Studio</h1>
         <h2>Cadastro</h2>
 
-        <form action="" method="post">
+        <form action="../../php/cadastro.php" method="post">
             <div>
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" placeholder="Nome de Usuário" class="input-field" required>
             </div>
+            
             <div>
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" class="input-field" required>
             </div>
             
             <div>
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" required>
+                <input type="tel" id="telefone" name="telefone" placeholder="99 9999-9999" class="input-field" required>
             </div>
 
             <div>
                 <label for="sexo">Sexo:</label>
-                <select id="sexo" name="sexo" required>
+                <select id="sexo" name="sexo" class="input-field" required>
                     <option value="masculino">Masculino</option>
                     <option value="feminino">Feminino</option>
                     <option value="outro">Outro</option>
@@ -37,11 +39,16 @@
 
             <div>
                 <label for="data_nascimento">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento" name="data_nascimento" required>
+                <input type="date" id="data_nascimento" name="data_nascimento" class="input-field" required>
             </div>
 
             <div>
-                <button type="submit" name="">Cadastrar</button>
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Senha deve até 32 caracteres" class="input-field" required>
+            </div>
+
+            <div>
+                <button type="submit" name="submit" class="submit-button">Cadastrar</button>
             </div>
 </body>
 </html>
