@@ -1,3 +1,17 @@
+<?php
+include_once('db_conn.php');
+
+if(isset($POST['submit_cadastro'])){
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $telefone = $_POST['telefone'];
+    $sexo = $_POST['sexo'];
+    $data_nasc = $_POST['data_nasc'];
+}
+?>
+<!-- calma, vou setar o agendamento primeiro -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +23,7 @@
     <header>
         <div id="logo">The Grooming Studio</div>
         <div id="homepage">
-            <a href="">Home</a>
+            <a href="index.html">Home</a>
         </div>
     </header>
 
