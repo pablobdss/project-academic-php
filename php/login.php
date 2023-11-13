@@ -11,23 +11,42 @@
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        // Cria a query para buscar o usuário no banco de dados
-        $sql = "SELECT * FROM usuarios WHERE email = '$email' AND password = '$password'";
+        // Cria a query parametrizada para buscar o usuário no banco de dados
+        $sql = "SELECT * FROM usuarios WHERE email = ? AND password = ?";
+        
+        // Prepara a declaração
+        $stmt = $conexao->prepare($sql);
 
-        // Executa a query no banco de dados
-        $result = $conexao->query($sql);
+        // Verifica se a preparação da declaração foi bem-sucedida
+        if ($stmt) {
+            // Vincula os parâmetros
+            $stmt->bind_param('ss', $email, $password);
 
-        // Verifica se a consulta retornou algum resultado
-        if ($result && $result->num_rows > 0) {
-            // Se as credenciais estão corretas, cria a sessão e redireciona para o menu
-            $_SESSION['email'] = $email;
-            $_SESSION['password'] = $password;
-            header('Location: menu.php');
-            exit;
+            // Executa a declaração
+            $stmt->execute();
+
+            // Armazena o resultado
+            $result = $stmt->get_result();
+
+            // Verifica se a consulta retornou algum resultado
+            if ($result && $result->num_rows > 0) {
+                // Se as credenciais estão corretas, cria a sessão e redireciona para o menu
+                $_SESSION['email'] = $email;
+                $_SESSION['password'] = $password;
+                header('Location: menu.php');
+                exit;
+            } else {
+                // Se as credenciais estão incorretas, destrói a sessão e redireciona para a página de login
+                header('Location: ../../../project-academic-php/pages/login/login.html');
+                session_destroy();
+                exit;
+            }
+
+            // Fecha a declaração
+            $stmt->close();
         } else {
-            // Se as credenciais estão incorretas, destrói a sessão e redireciona para a página de login
+            // Se a preparação da declaração falhar, redireciona para a página de login
             header('Location: ../../../project-academic-php/pages/login/login.html');
-            session_destroy();
             exit;
         }
     } else {
