@@ -11,9 +11,9 @@ function verificarAutenticacao() {
                 document.getElementById('conteudoProtegido').classList.remove('escondido');
             }
         })
-        .catch(error => {
-            alert('Erro ao verificar autenticação:', error);
-        });
+        // .catch(error => {
+        //     alert('Erro ao verificar autenticação:', error);
+        // });
         
 }
 

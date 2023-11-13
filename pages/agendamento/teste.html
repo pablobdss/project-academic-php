@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <span>Agendamentos</span>
+      <button onclick="openModal()" id="new">Novo agendamento</button>
+    </div>
+
+    <div class="divTable">
+      <table>
+        <thead>
+          <tr>
+            <th>Data Agendada</th>
+            <th>Horario Agendado</th>
+            <th>Corte Selecionado</th>
+            <th>Estilo de barba</th>
+            <th class="acao">Editar</th>
+            <th class="acao">Excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="modal-container">
+      <div class="modal">
+        <form>
+    
+            <label for="agenda-data">Qual o dia desejado?</label>
+            <input type="date" id="agenda-data" name="agenda-data" required>
+            <br> <br>
+    
+            <label for="agenda-hora">Qual o horário desejado?</label>
+            <input type="time" id="agenda-hora" name="agenda-hora" required>
+            <br> <br>
+    
+            <h4> Cortes de Cabelo </h4>
+            <label for="corte-cabelo">Escolha um corte de cabelo:</label>
+            <select id="corte-cabelo">
+                <option value="nenhum">Nenhum</option>
+                <option value="undercut">Undercut</option>
+                <option value="pompadour">Pompadour</option>
+                <option value="quiff">Quiff</option>
+                <option value="crew-cut">Crew Cut</option>
+                <option value="fade">Fade</option>
+                <option value="buzz-cut">Buzz Cut</option>
+            </select>
+    
+            <h4> Estilos de Barba </h4>
+            <label for="barba-style">Escolha um estilo de barba</label>
+            <select id="barba-style">
+                <option value="nenhum">Nenhum</option>
+                <option value="cheia">Barba Cheia</option>
+                <option value="curta">Barba Curta</option>
+                <option value="desenhada">Barba Desenhada</option>
+                <option value="por-fazer">Barba Por Fazer</option>
+                <option value="garibaldi">Barba Garibaldi</option>
+                <option value="ducktail">Barba Ducktail</option>
+                <option value="balbo">Barba Balbo</option>
+            </select>
+            <br> <br>
+
+            <button id="salvar-button">Salvar</button>
+        </form>
+    </div>
+
+  </div>
+  <script src="../../js/teste.js"></script>
+</body>
+
+</html>
