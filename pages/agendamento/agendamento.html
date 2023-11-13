@@ -15,45 +15,58 @@
 
     <h2>Reserva de Horário</h2>
     <form method="post" action="agendamento.php">
-        <label for="nome"> Nome: </label>
-        <input type="text" id="nome" name="nome" required>
-        <br> <br>
+        
+        <div>
+            <label for="nome"> Nome: </label>
+            <input type="text" id="nome" name="nome" required>
+            <br> <br>
+        </div>
 
-        <label for="data">Qual o dia desejado?</label>
-        <input type="date" id="data" name="data" required>
-        <br> <br>
+        <div>
+            <label for="data">Qual o dia desejado?</label>
+            <input type="date" id="data" name="data" required>
+            <br> <br>
+        </div>
 
-        <label for="hora">Qual o horário desejado?</label>
-        <input type="time" id="hora" name="hora" required>
-        <br> <br>
+        <div>
+            <label for="hora">Qual o horário desejado?</label>
+            <input type="time" id="hora" name="hora" required>
+            <br> <br>
+        </div>
 
-        <h4> Cortes de Cabelo </h4>
-        <label for="corte-cabelo">Escolha um corte de cabelo:</label>
-        <select id="corte-cabelo">
-            <option value="nenhum">Nenhum</option>
-            <option value="undercut">Undercut</option>
-            <option value="pompadour">Pompadour</option>
-            <option value="quiff">Quiff</option>
-            <option value="crew-cut">Crew Cut</option>
-            <option value="fade">Fade</option>
-            <option value="buzz-cut">Buzz Cut</option>
-        </select>
+        <div>
+            <h4> Cortes de Cabelo </h4>
+            <label for="corte-cabelo">Escolha um corte de cabelo:</label>
+            <select id="corte-cabelo">
+                <option value="nenhum">Nenhum</option>
+                <option value="undercut">Undercut</option>
+                <option value="pompadour">Pompadour</option>
+                <option value="quiff">Quiff</option>
+                <option value="crew-cut">Crew Cut</option>
+                <option value="fade">Fade</option>
+                <option value="buzz-cut">Buzz Cut</option>
+            </select>
+        </div>
 
-        <h4> Estilos de Barba </h4>
-        <label for="barba">Escolha um estilo de barba</label>
-        <select id="barba">
-            <option value="nenhum">Nenhum</option>
-            <option value="cheia">Barba Cheia</option>
-            <option value="curta">Barba Curta</option>
-            <option value="desenhada">Barba Desenhada</option>
-            <option value="por-fazer">Barba Por Fazer</option>
-            <option value="garibaldi">Barba Garibaldi</option>
-            <option value="ducktail">Barba Ducktail</option>
-            <option value="balbo">Barba Balbo</option>
-        </select>
+        <div>
+            <h4> Estilos de Barba </h4>
+            <label for="barba">Escolha um estilo de barba</label>
+            <select id="barba">
+                <option value="nenhum">Nenhum</option>
+                <option value="cheia">Barba Cheia</option>
+                <option value="curta">Barba Curta</option>
+                <option value="desenhada">Barba Desenhada</option>
+                <option value="por-fazer">Barba Por Fazer</option>
+                <option value="garibaldi">Barba Garibaldi</option>
+                <option value="ducktail">Barba Ducktail</option>
+                <option value="balbo">Barba Balbo</option>
+            </select>
+            <br> <br>
+        </div>
 
-        <br> <br>
-        <button type="submit" name="agendamento">Realizar Reserva</button>
+        <div>
+            <button type="submit" name="agendamento">Realizar Reserva</button>
+        </div>
     </form>
 </body>
 </html>

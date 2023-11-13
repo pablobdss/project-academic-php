@@ -26,13 +26,13 @@
             exit;
         } else {
             // Se as credenciais estão incorretas, destrói a sessão e redireciona para a página de login
-            header('Location: ../../../project-academic-php/pages/login/index.html');
+            header('Location: ../../../project-academic-php/pages/login/login.html');
             session_destroy();
             exit;
         }
     } else {
         // Se os campos do formulário estiverem vazios, redireciona para a página de login
-        header('Location: ../../../project-academic-php/pages/login/index.html');
+        header('Location: ../../../project-academic-php/pages/login/login.html');
         exit;
     }
 ?>
