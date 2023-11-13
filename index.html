@@ -1,11 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Page</title>
+    <title>Tela Inicial da Barbearia</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://cdn.pixabay.com/photo/2015/07/31/20/33/background-869578_960_720.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 0;
+            margin-top: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px;
+            background-color: #000000;
+            height: 100px;
+            margin-top: 0;
+        }
+
+        #logo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #menu {
+            display: none;
+            flex-direction: column;
+            align-items: flex-start;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            width: 200px;
+            z-index: 1;
+        }
+
+        #menu a {
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: block;
+        }
+
+        #menu-toggle {
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+
+        #menu-toggle:hover {
+            text-decoration: underline;
+        }
+
+        #menu-right {
+            display: flex;
+            align-items: center;
+        }
+
+        #menu-right a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        #bem-vindos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 5px;
+            height: calc(100vh - 100px);
+            position: relative;
+        }
+
+        #bem-vindos div {
+            margin: 0 20px;
+        }
+
+        #bem-vindos h2 {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        #bem-vindos h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: white;
+            margin: 10px auto;
+        }
+
+        #bem-vindos p {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        #imagem-bem-vindos {
+            max-width: 100%;
+            height: 100%;
+            margin-left: 20px;
+            position: relative;
+            flex: 1;
+        }
+
+        #imagem-bem-vindos img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            filter: grayscale(0%) brightness(70%) contrast(120%);
+        }
+
+        #pagina-inicial h2 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #pagina-inicial p {
+            font-size: 20px;
+        }
+
+        #sobre-nos h2 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        #sobre-nos p {
+            font-size: 20px;
+        }
+
+        #pagina-inicial div,
+        #sobre-nos div {
+            border: 2px solid white;
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        #pagina-inicial h2,
+        #pagina-inicial p,
+        #sobre-nos h2,
+        #sobre-nos p {
+            margin: 0;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    Home page Hello world
+    <header>
+        <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div id="menu" onclick="closeMenu()">
+            <a href="index.html">Página Inicial</a>
+            <a href="cadastrar.html">Fazer Cadastro</a>
+            <a href="login.html">Fazer Login</a>
+        </div>
+        <div id="logo">
+            <img src="C:\Users\fabio\Pictures\PROJETOPHP\LOGODEITADA.png" alt="Logo da Barbearia"
+                style="max-width: 200px; height: auto;">
+        </div>
+        <div id="menu-right">
+            <a href="#sobre-nos">SOBRE NÓS</a>
+        </div>
+    </header>
+
+    <section id="bem-vindos">
+        <div>
+            <h2>SUA IMAGEM,</h2>
+            <h2>NOSSA PRIORIDADE.</h2>
+        </div>
+        <div id="imagem-bem-vindos">
+            <img src="https://webtrends.net.br/wp-content/uploads/2020/10/Como-atrair-clientes-para-barbearia.png"
+                alt="Imagem de boas-vindas">
+        </div>
+    </section>
+
+    <section id="pagina-inicial">
+        <div>
+            <h2>Bem-vindo ao The Grooming Studio.</h2>
+                        <p>O seu destino premium para cuidados com a barba e cabelo. Aqui, a arte da barbearia se encontra com a modernidade, proporcionando uma experiência única para homens que valorizam sua aparência. Nossa equipe de especialistas em estilo está pronta para transformar cada visita em um ritual de cuidados personalizado, onde a atenção aos detalhes é a chave.</p>
+        </div>
+    </section>
+
+    <section id="sobre-nos">
+        <div>
+            <h2>Sobre Nós:</h2>
+            <p>O The Grooming Studio nasceu da paixão pela arte da barbearia e do compromisso com a satisfação do cliente. Nossa jornada começou com o objetivo de redefinir os padrões de excelência no cuidado masculino, unindo técnicas clássicas com as tendências mais modernas.</p>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = (menu.style.display === "block") ? "none" : "block";
+        }
+
+        function closeMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display = "none";
+        }
+    </script>
 </body>
 </html>
