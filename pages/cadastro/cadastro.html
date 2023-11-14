@@ -3,19 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
     <link rel="stylesheet" href="../../css/style.css">
     <title>Cadastro</title>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>The Grooming Studio</h1>
-        <h2>Cadastro</h2>
 
-        <div id="homepage">
-            <a href="../../index.html">Home</a>
+    <header>
+        <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+        <div id="menu" onclick="closeMenu()">
+            <a href="index.html">Página Inicial</a>
+            <a href="pages/cadastro/cadastro.html">Fazer Cadastro</a>
+            <a href="pages/login/login.html">Fazer Login</a>
         </div>
+        <div id="logo">
+            <img src="assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img" style="max-width: 200px; height: auto;">
+        </div>
+        
+        <div id="menu-right">
+            <a href="../../index.html">HOME</a>
+        </div>
+    </header>
 
+        <div class="form-container">
         <form action="../../php/cadastro.php" method="post">
             <div>
                 <label for="nome">Nome:</label>
@@ -53,6 +63,8 @@
 
             <div>
                 <button type="submit" name="submit_cadastro" class="submit-button">Cadastrar</button>
+            </div>
+            </form>
             </div>
 </body>
 </html>
