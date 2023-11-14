@@ -30,10 +30,17 @@
 
             // Verifica se a consulta retornou algum resultado
             if ($result && $result->num_rows > 0) {
+
+                // Obtém a linha do resultado
+                $row = $result->fetch_assoc();
+
+                // Armazena o ID do usuário na sessão
+                $_SESSION['id'] = $row['id'];
+
                 // Se as credenciais estão corretas, cria a sessão e redireciona para o menu
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $password;
-                header('Location: menu.php');
+                header('Location: ../../../project-academic-php/pages/menu/menu.html');
                 exit;
             } else {
                 // Se as credenciais estão incorretas, destrói a sessão e redireciona para a página de login
