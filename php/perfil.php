@@ -21,7 +21,8 @@ if ($result && $result->num_rows > 0) {
 
 // Converte o array para formato JSON
 $agendamentos_json = json_encode($agendamentos);
-printf($agendamentos_json);
-// Envia o JSON para o JavaScript
-echo "<script>var agendamentos = $agendamentos_json;</script>";
+
+// Envia o JSON como resposta
+header('Content-Type: application/json');
+echo $agendamentos_json;
 ?>
