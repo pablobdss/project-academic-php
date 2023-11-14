@@ -42,3 +42,23 @@ document.getElementById('valida_form').addEventListener('submit', function (even
     }
     alert("Agendamento realizado com Sucesso!")
 });
+
+// Enviar solicitação ao servidor usando fetch
+fetch('../../php/agendamento.php', {
+    method: 'POST',
+    body: formData,
+})
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Agendamento realizado com sucesso!');
+            window.location.href = '../menu/menu.html';
+        } else {
+            // Se houver um erro, exibir a mensagem de erro
+            alert('Erro ao processar agendamento: ' + data.error);
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao processar agendamento:', error);
+        alert('Erro ao processar agendamento:', error);
+    });
