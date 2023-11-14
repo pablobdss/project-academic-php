@@ -1,7 +1,7 @@
 <?php
 // Inclua o arquivo de conexão
-include_once('db_conn.php');
 include_once('verifica_login.php');
+include_once('db_conn.php');
 
 // Inicializa a resposta como um array
 $response = array();
