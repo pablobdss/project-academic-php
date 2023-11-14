@@ -12,12 +12,12 @@
     <header>
         <div id="menu-toggle" onclick="toggleMenu()">☰</div>
         <div id="menu" onclick="closeMenu()">
-            <a href="index.html">Página Inicial</a>
-            <a href="pages/cadastro/cadastro.html">Fazer Cadastro</a>
-            <a href="pages/login/login.html">Fazer Login</a>
+            <a href="../../index.html">Página Inicial</a>
+            <a href="../cadastro/cadastro.html">Fazer Cadastro</a>
+            <a href="../login/login.html">Fazer Login</a>
         </div>
         <div id="logo">
-            <img src="assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img" style="max-width: 200px; height: auto;">
+            <img src="../../assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img" style="max-width: 200px; height: auto;">
         </div>
         
         <div id="menu-right">
@@ -25,46 +25,47 @@
         </div>
     </header>
 
-        <div class="form-container">
-        <form action="../../php/cadastro.php" method="post">
-            <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Nome de Usuário" class="input-field" required>
-            </div>
-            
-            <div>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" class="input-field" required>
-            </div>
-            
-            <div>
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="99 9999-9999" class="input-field" required>
-            </div>
+    <div class="form-container">
+    <form action="../../php/cadastro.php" method="post">
+        <div>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome de Usuário" class="input-field" required>
+        </div>
+        
+        <div>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo@gmail.com" class="input-field" required>
+        </div>
+        
+        <div>
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="99 9999-9999" class="input-field" required>
+        </div>
 
-            <div>
-                <label for="sexo">Sexo:</label>
-                <select id="sexo" name="sexo" class="input-field" required>
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
-                </select>
-            </div>
+        <div>
+            <label for="sexo">Sexo:</label>
+            <select id="sexo" name="sexo" class="input-field" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+            </select>
+        </div>
 
-            <div>
-                <label for="data_nascimento">Data de Nascimento:</label>
-                <input type="date" id="data_nascimento" name="data_nascimento" class="input-field" required>
-            </div>
+        <div>
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" class="input-field" required>
+        </div>
 
-            <div>
-                <label for="password">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Senha deve possuir até 32 caracteres" class="input-field" required>
-            </div>
+        <div>
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="Senha deve possuir até 32 caracteres" class="input-field" required>
+        </div>
 
-            <div>
-                <button type="submit" name="submit_cadastro" class="submit-button">Cadastrar</button>
-            </div>
-            </form>
-            </div>
+        <div>
+            <button type="submit" name="submit_cadastro" class="submit-button">Cadastrar</button>
+        </div>
+        </form>
+        </div>
+    <script src="../../js/home.js"></script>
 </body>
 </html>

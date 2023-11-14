@@ -3,40 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../js/verifica_login.js"></script>
     <title>Menu</title>
 </head>
 <body>
-
+    <!-- Conteúdo que será exibido apenas se o usuário estiver autenticado -->
     <div id="conteudoProtegido" class="escondido">
         <header>
             <div id="menu-toggle" onclick="toggleMenu()">☰</div>
             <div id="menu" onclick="closeMenu()">
-                <a href="index.html">Página Inicial</a>
-                <a href="pages/cadastro/cadastro.html">Fazer Cadastro</a>
-                <a href="pages/login/login.html">Fazer Login</a>
+                <a href="../../index.html">Página Inicial</a>
+                <a href="../cadastro/cadastro.html">Fazer Cadastro</a>
+                <a href="../login/login.html">Fazer Login</a>
+                <a href="../menu/menu.html">Menu</a> 
+                <button type="button" name="logout" class="logout" onclick="logout()">Logout</button>
+                <!-- apenas para testes de o menu ficaria visivel no index, posteirormente vamos alterar para somente mostrar quando estiver logado -->
             </div>
             <div id="logo">
-                <img src="assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img" style="max-width: 200px; height: auto;">
+                <img src="../../assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img" style="max-width: 200px; height: auto;">
             </div>
             
             <div id="menu-right">
-                <a href="../../index.html">HOME</a>
+                <a href="#sobre-nos">SOBRE NÓS</a>
             </div>
         </header>
-
-        <div class="form-container">
-        <h1>Quais são os planos para hoje?</h1>
-        <ul>
-            <li> <a href="../agendamento/agendamento.html">Realizar Agendamento</a></li>
-            <li> <a href="../perfil/perfil.html">Visualizar Perfil</a></li>
-        </ul>
-        <button type="button" name="logout" class="logout" onclick="logout()">Logout</button>
-        </div>
-
+                <h1>Quais são os planos para hoje?</h1>
+                <ul>
+                    <li> <a href="../agendamento/agendamento.html">Realizar Agendamento</a></li>
+                    <li> <a href="../perfil/perfil.html">Verificar Perfil</a></li>
+            </div>
     </div>
     <script src="../../js/logout.js"></script>
+    <script src="../../js/home.js"></script>
 </body>
 </html>

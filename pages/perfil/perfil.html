@@ -10,13 +10,24 @@
     <title>Agendamentos</title>
 </head>
 <body>
-
+    
     <div id="conteudoProtegido" class="escondido">
         <header>
-            <div id="logo">The Grooming Studio</div>
-            <div id="homepage"></div>
-            <a href="../../index.html">Home</a>
-            <a href="../menu/menu.html">Menu</a>
+            <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div id="menu" onclick="closeMenu()">
+                <a href="../../index.html">Página Inicial</a>
+                <a href="../cadastro/cadastro.html">Fazer Cadastro</a>
+                <a href="../login/login.html">Fazer Login</a>
+                <a href="../menu/menu.html">Menu</a> 
+                <!-- apenas para testes de o menu ficaria visivel no index, posteirormente vamos alterar para somente mostrar quando estiver logado -->
+            </div>
+            <div id="logo">
+                <img src="../../assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img" style="max-width: 200px; height: auto;">
+            </div>
+            
+            <div id="menu-right">
+                <a href="#sobre-nos">SOBRE NÓS</a>
+            </div>
         </header>
         
         <!-- Container de Agendamentos -->
@@ -25,11 +36,12 @@
             <table id="tabelaAgendamentos">
                 <tr>
                     <tr>
-                        
+
                     </tr>
                 </tr>
             </table>
         </div>
     <script src="../../js/perfil.js"></script>
+    <script src="../../js/home.js"></script>
 </body>
 </html>
