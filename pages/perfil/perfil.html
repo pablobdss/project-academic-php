@@ -4,22 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/verifica_login.js"></script>
     <title>Agendamentos</title>
 </head>
 <body>
-    <div id="agendamentos-container">
-        <!-- Os agendamentos serão exibidos aqui -->
-    </div>
 
-    <table>
-        <tr>
-            <th>Data</th>
-            <th>Hora</th>
-            <th>Corte de Cabelo</th>
-            <th>Estilo de Barba</th>
-        </tr>
+    <div id="conteudoProtegido" class="escondido">
+        <header>
+            <div id="logo">The Grooming Studio</div>
+            <div id="homepage"></div>
+            <a href="../../index.html">Home</a>
+            <a href="../menu/menu.html">Menu</a>
+        </header>
         
+        <!-- Container de Agendamentos -->
+        <h2>Agendamentos</h2>
+        <div id="agendamentos-container">
+            <div id="tabelaAgendamentosPersonalizada">
+                <table>
+                  <thead>
+                    <tr>
+                        <th>Data Agendada</th>
+                        <th>Horario Marcado</th>
+                        <th>Corte de Cabelo</th>
+                        <th>Estilo de Barba</th>
+                        <th class='acao'>Editar</th>
+                        <th class='acao'>Excluir</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Tabela de Agendamentos -->
+            <table id="tabelaAgendamentos">
+                <tr>
+                    <tr>
+                        
+                    </tr>
+                </tr>
+            </table>
+        </div>
     <script src="../../js/perfil.js"></script>
 </body>
 </html>

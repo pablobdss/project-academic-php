@@ -233,3 +233,60 @@ button {
 button:hover {
   background-color: #0056b3;
 }
+
+#tabelaAgendamentos {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#tabelaAgendamentos th,
+#tabelaAgendamentos td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+}
+
+#tabelaAgendamentos th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#tabelaAgendamentos td.acao {
+  white-space: nowrap;
+}
+
+#tabelaAgendamentos button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #3498db;
+}
+
+#tabelaAgendamentos button i {
+  font-size: 20px;
+}
+
+#agendamentos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+#agendamentos-container h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#agendamentos-container p {
+  font-size: 18px;
+  margin: 0;
+}
