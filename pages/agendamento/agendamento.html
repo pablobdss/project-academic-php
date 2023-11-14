@@ -3,68 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="../../js/verifica_login.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <div id="logo">The Grooming Studio</div>
-        <div id="homepage">
+
+    <div id="conteudoProtegido" class="escondido">
+        <header>
+            <div id="logo">The Grooming Studio</div>
+            <div id="homepage">
+            </div>
             <a href="../../index.html">Home</a>
-        </div>
-    </header>
-
-    <h2>Reserva de Horário</h2>
-    <form action="" method="post">
-        
-        <div>
-            <label for="data">Qual o dia desejado?</label>
-            <input type="date" id="data" name="data" required>
-            <br> <br>
-        </div>
+            <a href="../menu/menu.html">Menu</a>
+        </header>
     
-        <div>
+        <h2>Reserva de Horário</h2>
+        <form id="valida_form" action="../../php/agendamento.php" method="post">
             <div>
-                <label for="hora">Qual o horário desejado?</label>
-                <select id="minutos" required></select>
+                <label for="data">Qual o dia desejado?</label>
+                <input type="date" id="data_agendamento" name="data_agendamento" required>
                 <br> <br>
-            </div>            
-        </div>
-    
-        <div>
-            <h4> Cortes de Cabelo </h4>
-            <label for="corte-cabelo">Escolha um corte de cabelo:</label>
-            <select id="corte-cabelo">
-                <option value="nenhum">Nenhum</option>
-                <option value="undercut">Undercut</option>
-                <option value="pompadour">Pompadour</option>
-                <option value="quiff">Quiff</option>
-                <option value="crew-cut">Crew Cut</option>
-                <option value="fade">Fade</option>
-                <option value="buzz-cut">Buzz Cut</option>
-            </select>
-        </div>
-    
-        <div>
-            <h4> Estilos de Barba </h4>
-            <label for="barba">Escolha um estilo de barba</label>
-            <select id="barba">
-                <option value="nenhum">Nenhum</option>
-                <option value="cheia">Barba Cheia</option>
-                <option value="curta">Barba Curta</option>
-                <option value="desenhada">Barba Desenhada</option>
-                <option value="por-fazer">Barba Por Fazer</option>
-                <option value="garibaldi">Barba Garibaldi</option>
-                <option value="ducktail">Barba Ducktail</option>
-                <option value="balbo">Barba Balbo</option>
-            </select>
-            <br> <br>
-        </div>
-    
-        <div>
-            <button type="submit" name="agendamento">Realizar Reserva</button>
-        </div>
-
-    <script src="../../js/agendamento.js"></script>
-    <script src="../../js/verifica_login.js"></script>
-</body>
+            </div>
+        
+            <div>
+                <div>
+                    <label for="horarios">Qual o horário desejado?</label>
+                    <select id="horarios" name="horarios" required>
+                        <!-- Manhã -->
+                        <option value="08:00">08:00</option>
+                        <option value="08:10">08:10</option>
+                        <option value="08:20">08:20</option>
+                        <option value="08:30">08:30</option>
+                        <option value="08:40">08:40</option>
+                        <option value="08:50">08:50</option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:10">09:10</option>
+                        <option value="09:20">09:20</option>
+                        <option value="09:30">09:30</option>
+                        <option value="09:40">09:40</option>
+                        <option value="09:50">09:50</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:10">10:10</option>
+                        <option value="10:20">10:20</option>
+                        <option value="10:30">10:30</option>
+                        <option value="10:40">10:40</option>
+                        <option value="10:50">10:50</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:10">11:10</option>
+                        <option value="11:20">11:20</option>
+                        <option value="11:30">11:30</option>
+                        <option value="11:40">11:40</option>
+                        <option value="11:50">11:50</option>
+                    
+                        <!-- Tarde -->
+                        <option value="14:00">14:00</option>
+                        <option value="14:10">14:10</option>
+                        <option value="14:20">14:20</option>
+                        <option value="14:30">14:30</option>
+                        <option value="14:40">14:40</option>
+                        <option value="14:50">14:50</option>
+                        <option value="15:00">15:00</option>
+                        <option value="15:10">15:10</option>
+                        <option value="15:20">15:20</option>
+                        <option value="15:30">15:30</option>
+                        <option value="15:40">15:40</option>
+                        <option value="15:50">15:50</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:10">16:10</option>
+                        <option value="16:20">16:20</option>
+                        <option value="16:30">16:30</option>
+                        <option value="16:40">16:40</option>
+                        <option value="16:50">16:50</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:10">17:10</option>
+                        <option value="17:20">17:20</option>
+                        <option value="17:30">17:30</option>
+                        <option value="17:40">17:40</option>
+                        <option value="17:50">17:50</option>
+                    </select>
+                    <br>
+                </div>            
+            </div>
+        
+            <div>
+                <h4> Cortes de Cabelo </h4>
+                <label for="corte_cabelo">Escolha um corte de cabelo:</label>
+                <select id="tipos_cortes" name="tipos_cortes">
+                    <option value="nenhum">Nenhum</option>
+                    <option value="undercut">Undercut</option>
+                    <option value="pompadour">Pompadour</option>
+                    <option value="quiff">Quiff</option>
+                    <option value="crew-cut">Crew Cut</option>
+                    <option value="fade">Fade</option>
+                    <option value="buzz-cut">Buzz Cut</option>
+                </select>
+            </div>
+        
+            <div>
+                <h4> Estilos de Barba </h4>
+                <label for="tipos_barbas">Escolha um estilo de barba</label>
+                <select id="tipos_barbas" name="tipos_barbas">
+                    <option value="nenhum">Nenhum</option>
+                    <option value="cheia">Barba Cheia</option>
+                    <option value="curta">Barba Curta</option>
+                    <option value="desenhada">Barba Desenhada</option>
+                    <option value="por-fazer">Barba Por Fazer</option>
+                    <option value="garibaldi">Barba Garibaldi</option>
+                    <option value="ducktail">Barba Ducktail</option>
+                    <option value="balbo">Barba Balbo</option>
+                </select>
+                <br> <br>
+            </div>
+        
+            <div>
+                <button type="submit" name="submit_agendamento" class="agendamento-button">Realizar Reserva</button>
+            </div>
+        </form>
+        <script src="../../js/agendamento.js"></script>
+    </div>
 </html>
