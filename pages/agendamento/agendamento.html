@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
     <link rel="stylesheet" href="../../css/style.css">
     <script src="../../js/verifica_login.js"></script>
     <title>Document</title>
 </head>
 <body>
-
     <div id="conteudoProtegido" class="escondido">
         <header>
-            <div id="logo">The Grooming Studio</div>
-            <div id="homepage">
+            <div id="menu-toggle" onclick="toggleMenu()">☰</div>
+            <div id="menu" onclick="closeMenu()">
+                <a href="index.html">Página Inicial</a>
+                <a href="pages/cadastro/cadastro.html">Fazer Cadastro</a>
+                <a href="pages/login/login.html">Fazer Login</a>
             </div>
-            <a href="../../index.html">Home</a>
-            <a href="../menu/menu.html">Menu</a>
+            <div id="logo">
+                <img src="assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img" style="max-width: 200px; height: auto;">
+            </div>
+            
+            <div id="menu-right">
+                <a href="#sobre-nos">SOBRE NÓS</a>
+            </div>
         </header>
     
         <h2>Reserva de Horário</h2>
