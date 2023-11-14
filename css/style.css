@@ -36,31 +36,64 @@ body {
   font-family: 'Poppins', sans-serif;
   color: white;
   text-align: center;
-  padding-top: 0;
-  margin-top: 0;
+  width: 100%;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+  position: relative;
   padding: 0px;
   background-color: #000000;
   height: 100px;
   margin-top: 0;
+  overflow-x: hidden;
+}
+
+#gambi {
+  margin-right: 25%;
 }
 
 #logo {
-  flex-grow: 1;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#logo img{
-  max-width: 100%;
+#logo img {
+  max-width: 15%;
   height: auto;
-  display: inline-block;
-  margin: 0 auto;
+  margin-right: 10px;
 }
+
+/* header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  background-color: #000000;
+  height: 100px;
+  margin-top: 0;
+  width: 100%;
+} */
+
+/* #logo {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+/* #logo img{
+  max-width: 15%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: auto;
+} */
 
 #menu {
   display: none;
