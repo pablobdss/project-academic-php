@@ -1,0 +1,58 @@
+[
+    {
+        "agendamento_id": "1",
+        "user_id": "1",
+        "data_agendada": "2023-11-15",
+        "hora_agendada": "09:50",
+        "corte_esc": "crew-cut",
+        "barba_esc": "garibaldi"
+    },
+    {
+        "agendamento_id": "28",
+        "user_id": "1",
+        "data_agendada": "2023-11-23",
+        "hora_agendada": "08:00",
+        "corte_esc": "crew-cut",
+        "barba_esc": "curta"
+    },
+    {
+        "agendamento_id": "29",
+        "user_id": "1",
+        "data_agendada": "2023-11-21",
+        "hora_agendada": "08:00",
+        "corte_esc": "crew-cut",
+        "barba_esc": "balbo"
+    },
+    {
+        "agendamento_id": "30",
+        "user_id": "1",
+        "data_agendada": "2023-11-30",
+        "hora_agendada": "08:00",
+        "corte_esc": "crew-cut",
+        "barba_esc": "cheia"
+    },
+    {
+        "agendamento_id": "31",
+        "user_id": "1",
+        "data_agendada": "2023-11-16",
+        "hora_agendada": "08:00",
+        "corte_esc": "crew-cut",
+        "barba_esc": "desenhada"
+    },
+    {
+        "agendamento_id": "32",
+        "user_id": "1",
+        "data_agendada": "2023-11-28",
+        "hora_agendada": "08:00",
+        "corte_esc": "quiff",
+        "barba_esc": "nenhum"
+    },
+    {
+        "agendamento_id": "33",
+        "user_id": "1",
+        "data_agendada": "2023-11-21",
+        "hora_agendada": "08:00",
+        "corte_esc": "crew-cut",
+        "barba_esc": "nenhum"
+    }
+]

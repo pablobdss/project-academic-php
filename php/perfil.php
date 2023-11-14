@@ -19,10 +19,12 @@ if ($result && $result->num_rows > 0) {
     }
 }
 
-// Converte o array para formato JSON
-$agendamentos_json = json_encode($agendamentos);
+// Converte o array para formato JSON com formatação para fácil leitura
+$agendamentos_json = json_encode($agendamentos, JSON_PRETTY_PRINT);
 
-// Envia o JSON como resposta
-header('Content-Type: application/json');
-echo $agendamentos_json;
+// Especifique o caminho do diretório onde deseja salvar o arquivo JSON
+$dirJson = '../json/agendamentos.json';
+
+// Salva o JSON no arquivo
+file_put_contents($dirJson, $agendamentos_json);
 ?>
