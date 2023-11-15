@@ -267,7 +267,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #585858;
 }
 
 #tabelaAgendamentos {
@@ -365,7 +365,7 @@ button {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #585858;
 }
 
 .button {
@@ -384,7 +384,7 @@ button:hover {
 }
 
 .button:hover {
-  background-color: #0056b3;
+  background-color: #585858;
 }
 
 .button, .logout {
@@ -392,7 +392,7 @@ button:hover {
   padding: 10px 20px;
   text-decoration: none;
   color: #ffffff;
-  background-color: #007bff;
+  background-color: #585858;
   border-radius: 5px;
 }
 
@@ -415,7 +415,7 @@ a {
   padding: 10px 20px;
   text-decoration: none;
   color: #fff;
-  background-color: #3498db;
+  background-color: #585858;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
