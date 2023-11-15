@@ -10,7 +10,7 @@
 
 /* Estilize o botão */
 .submit-button {
-  background-color: #4CAF50;
+  background-color: #8b8b8b;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -50,10 +50,6 @@ header {
   height: 100px;
   margin-top: 0;
   overflow-x: hidden;
-}
-
-#gambi {
-  margin-right: 25%;
 }
 
 #logo {
