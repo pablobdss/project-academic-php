@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../css/style.css">
-    <script src="../../js/verifica_login.js"></script>
     <title>Agendamentos</title>
 </head>
 <body>
@@ -41,6 +40,19 @@
                 </tr>
             </table>
         </div>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="rescheduleBox" id="rescheduleClose">&times;</span>
+                <p>Deseja realizar uma remarcação?</p>
+                <button id="rescheduleOpen">Sim</button>
+                <button id="rescheduleClose">Não</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="../../js/verifica_login.js"></script>
     <script src="../../js/perfil.js"></script>
     <script src="../../js/home.js"></script>
 </body>

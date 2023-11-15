@@ -327,6 +327,40 @@ button:hover {
   margin: 0;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 15% auto;
+  padding: 2%;
+  border: 1px solid #888;
+  width: 50%;
+}
+
+.rescheduleBox {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.rescheduleBox:hover,
+
+.rescheduleBox:focus {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* config menu */
 
 .form-container {
@@ -423,3 +457,4 @@ a {
 a:hover {
   background-color: #2980b9;
 }
+
