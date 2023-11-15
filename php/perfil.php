@@ -27,4 +27,5 @@ $dirJson = '../json/agendamentos.json';
 
 // Salva o JSON no arquivo
 file_put_contents($dirJson, $agendamentos_json);
+print_r("\nJson gerado com sucesso!")
 ?>
