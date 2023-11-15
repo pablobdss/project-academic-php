@@ -1,3 +1,6 @@
+// Esconde o conteúdo protegido inicialmente
+$('#conteudoProtegido').hide();
+
 // Função para verificar a autenticação
 function verificarAutenticacao() {
     fetch('../../php/verifica_autenticacao.php')
@@ -7,11 +10,18 @@ function verificarAutenticacao() {
             if (!data.isAuthenticated) {
                 window.location.href = '../../pages/login/login.html';
             } else {
-                // Se o usuário estiver autenticado, exiba o conteúdo oculto
-                document.getElementById('conteudoProtegido').classList.remove('escondido');
+                // Mostra o conteúdo protegido
+                mostrarConteudoAutenticado();
             }
         })
 }
 
-// Chame a função de verificação quando a página for carregada
-window.onload = verificarAutenticacao;
+// Função para mostrar o conteúdo autenticado usando jQuery
+function mostrarConteudoAutenticado() {
+    $('#conteudoProtegido').show();
+}
+
+// Chama a função de verificação quando a página é carregada
+$(function () {
+    verificarAutenticacao();
+});
