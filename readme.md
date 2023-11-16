@@ -38,6 +38,8 @@ We welcome contributions to improve the Barber Appointment System. If you'd like
 - Ensure your code follows our coding standards and is well-documented.
 - Create a pull request with a clear description of your changes for review.
 
+One of the objectives that we pursued in this project was to maintain each file separate. Therefore, we won't have PHP and HTML mixed.
+
 ## Contributors
 
 - [Juan Pablo](https://github.com/pablobdss) - Back-End
@@ -82,6 +84,8 @@ Aceitamos contribuições para melhorar o Sistema de Agendamento de Barbearia. S
 - Faça um fork do repositório, crie um novo branch e faça suas modificações.
 - Certifique-se de que seu código siga nossos padrões de codificação e esteja bem documentado.
 - Crie um pull request com uma descrição clara das suas alterações para revisão.
+
+Um dos objetivos que nós buscamos neste projeto foi manter cada arquivo separado. Por isso, não teremos PHP e HTML misturados.
 
 ## Contribuidores
 
