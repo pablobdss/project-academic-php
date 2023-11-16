@@ -20,10 +20,6 @@
   width: 100%;
 }
 
-.escondido {
-  display: none;
-}
-
 /* css da homepage */
 
 body {
@@ -344,21 +340,22 @@ button:hover {
   margin: 15% auto;
   padding: 2%;
   border: 1px solid #888;
-  width: 50%;
+  width: 20%;
 }
 
-.rescheduleBox {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.rescheduleBox:hover,
-
-.rescheduleBox:focus {
-  text-decoration: none;
+.modal-content button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s; /* Adicionando transição para suavizar a mudança de cor */
+
+}
+
+.modal-content button:hover {
+  background-color: #2980b9; /* Alterando a cor ao passar o mouse sobre os botões "Sim" e "Não" */
+  color: white; /* Alterando a cor do texto ao passar o mouse sobre os botões "Sim" e "Não" */
 }
 
 /* config menu */
