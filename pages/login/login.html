@@ -20,24 +20,28 @@
         </div>
     </header>
 
+    
     <div class="form-container">
         <form action="../../php/login.php" method="post">
             <div>
                 <label for="email">E-mail</label>
                 <input type="text" id="usuario" name="email" placeholder="E-mail" class="input-field" required>
             </div>
-
+            
+            
             <div>
                 <label for="password">Senha:</label>
                 <input type="password" id="password" name="password" placeholder="Sua Senha" class="input-field" required>
             </div>
-
+            <div id="errorMessage"></div>
+            
             <div>
                 <button type="submit" name="submit_login" class="submit-button">Entrar</button>
             </div>
-
+            
         </form>
     </div>
+    <script src="../../js/login.js"></script>
     <script src="../../js/home.js"></script>
 </body>
 </html>

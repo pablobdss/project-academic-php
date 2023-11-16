@@ -39,8 +39,9 @@ document.getElementById('valida_form').addEventListener('submit', function (even
     if (corteCabelo === 'nenhum' && estiloBarba === 'nenhum') {
         alert('Por favor, escolha pelo menos um corte de cabelo ou um estilo de barba.');
         event.preventDefault(); // Impede o envio do formulário
+    } else {
+        alert("Agendamento realizado com Sucesso!")
     }
-    alert("Agendamento realizado com Sucesso!")
 });
 
 // Enviar solicitação ao servidor usando fetch
