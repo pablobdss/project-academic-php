@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <div id="conteudoProtegido" class="escondido">
+    <div id="conteudoProtegido">
         <header>
             <div id="menu-toggle" onclick="toggleMenu()">☰</div>
             <div id="menu" onclick="closeMenu()">
@@ -39,14 +39,25 @@
                     </tr>
                 </tr>
             </table>
+            <div id="semAgendamentos">
+                <p>Parece que você ainda não possui agendamentos conosco.</p>
+                <a href="../agendamento/agendamento.html">Realizar novo agendamento</a>
+            </div>
         </div>
 
-        <div id="myModal" class="modal">
+        <div id="myRescheduleModal" class="modal">
             <div class="modal-content">
-                <span class="rescheduleBox" id="rescheduleClose">&times;</span>
                 <p>Deseja realizar uma remarcação?</p>
                 <button id="rescheduleOpen">Sim</button>
                 <button id="rescheduleClose">Não</button>
+            </div>
+        </div>
+
+        <div id="cancelModal" class="modal">
+            <div class="modal-content">
+                <p>Deseja realmente prosseguir com o cancelamento?</p>
+                <button id="cancelOpen">Sim</button>
+                <button id="cancelClose">Não</button>
             </div>
         </div>
         
