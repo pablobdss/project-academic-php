@@ -28,7 +28,7 @@ To configure the database:
 
 Make sure to perform these steps to ensure the database is properly configured before using the project
 
-### Under Development
+## Under Development
 
 We're continuously enhancing the Project to handle exceptional cases such as previously scheduled dates and times, users with the same email, among others. We are actively working on refining these aspects to ensure a more robust system.
 
@@ -81,7 +81,7 @@ Para configurar o banco de dados:
 
 Certifique-se de executar essas etapas para garantir que o banco de dados esteja configurado corretamente antes de usar o projeto.
 
-### Em Desenvolvimento
+## Em Desenvolvimento
 
 Estamos continuamente aprimorando o Projeto para lidar com casos excepcionais, como datas e horários já agendados, usuários com o mesmo e-mail, entre outros. Estamos trabalhando ativamente para aprimorar esses aspectos, visando um sistema mais robusto.
 
