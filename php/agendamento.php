@@ -45,6 +45,8 @@ if (isset($_POST['submit_agendamento'])) {
             if ($stmt->affected_rows > 0) {
                 $response['success'] = true;
                 $response['message'] = 'Agendamento realizado com sucesso!';
+                include('atualiza_agendamentos.php');
+                header('Location: ../../../project-academic-php/pages/menu/menu.html');
             } else {
                 $response['success'] = false;
                 $response['error'] = 'Erro ao inserir no banco de dados. Detalhes: ' . $stmt->error;
