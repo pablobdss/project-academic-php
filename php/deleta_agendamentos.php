@@ -13,6 +13,6 @@
     } else {
         echo "Erro ao excluir agendamento: " . $conexao->error;
     }
-
+    //Fecha a conexao
     $conexao->close();
 ?>

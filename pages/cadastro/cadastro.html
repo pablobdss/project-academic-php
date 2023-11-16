@@ -34,14 +34,15 @@
         
         <div>
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone" placeholder="+55 99 99999-9999" class="input-field" required>
-            <small>Formato: +55 XX XXXXX-XXXX</small>
+            <input type="tel" id="telefone" name="telefone" placeholder="+55 99 9 9999-9999" class="input-field" required>
+            <small>Formato: +55 XXX XXXXX-XXXX</small>
         <div>
             <label for="sexo">Sexo:</label>
             <select id="sexo" name="sexo" class="input-field" required>
                 <option value="masculino">Masculino</option>
                 <option value="feminino">Feminino</option>
                 <option value="outro">Outro</option>
+                <option value="outro2">Prefiro não informar</option>
             </select>
         </div>
 
@@ -60,31 +61,19 @@
         </div>
     </form>
     </div>
+    <script src="../../js/cadastro.js"></script>
     <script src="../../js/home.js"></script>
-
     <script>
-        // Obtém a referência do input de telefone
         const inputTelefone = document.getElementById('telefone');
 
-        // Adiciona um listener para monitorar as mudanças no input
         inputTelefone.addEventListener('input', function (e) {
-            // Remove todos os caracteres não numéricos
-            const numero = this.value.replace(/\D/g, '');
+            let numero = this.value.replace(/\D/g, ''); // Remove todos os caracteres não numéricos
 
-            // Formata o número de telefone
-            let numeroFormatado = '+55';
-            for (let i = 2; i < numero.length; i += 1) {
-                if (i === 4) {
-                    numeroFormatado += ' ';
-                }
-                if (i === 9) {
-                    numeroFormatado += '-';
-                }
-                numeroFormatado += numero[i];
+            if (numero.length > 15) {
+                numero = numero.slice(0, 15); // Limita o número máximo de dígitos a 15
             }
 
-            // Atualiza o valor no input
-            this.value = numeroFormatado;
+            this.value = numero; // Define o valor do campo apenas com os números permitidos
         });
     </script>
 </body>
