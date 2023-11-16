@@ -40,8 +40,8 @@ We welcome contributions to improve the Barber Appointment System. If you'd like
 
 ## Contributors
 
-- [Juan Pablo](https://github.com/pablobdss)
-- [Fábio Rangel ](https://github.com/fabiords07)
+- [Juan Pablo](https://github.com/pablobdss) - Back-End
+- [Fábio Rangel ](https://github.com/fabiords07) - Front-End
 
 # Sistema de Agendamento de Barbearia
 
@@ -85,5 +85,5 @@ Aceitamos contribuições para melhorar o Sistema de Agendamento de Barbearia. S
 
 ## Contribuidores
 
-- [Juan Pablo](https://github.com/pablobdss)
-- [Fábio Rangel ](https://github.com/fabiords07)
+- [Juan Pablo](https://github.com/pablobdss) - Back-End
+- [Fábio Rangel ](https://github.com/fabiords07) - Front-End
