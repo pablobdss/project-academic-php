@@ -9,9 +9,6 @@ $(function () {
                 window.location.href = '../../pages/login/login.html';
             } else {
                 $('#conteudoProtegido').show();
-                $('#cadastroLink').hide();
-                $('#loginLink').hide();
-                $('#menuLink').show()
             }
         })
         .catch(error => {

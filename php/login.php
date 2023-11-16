@@ -43,22 +43,21 @@
                 header('Location: ../../../project-academic-php/pages/menu/menu.html');
                 exit;
             } else {
-                // Se as credenciais estão incorretas, destrói a sessão e redireciona para a página de login
-                header('Location: ../../../project-academic-php/pages/login/login.html');
-                session_destroy();
+                // Se as credenciais estão incorretas, redireciona para a página de login com uma mensagem de erro
+                header('Location: ../../../project-academic-php/pages/login/login.html?error=1');
                 exit;
             }
 
             // Fecha a declaração
             $stmt->close();
         } else {
-            // Se a preparação da declaração falhar, redireciona para a página de login
-            header('Location: ../../../project-academic-php/pages/login/login.html');
+            // Se a preparação da declaração falhar, redireciona para a página de login com uma mensagem de erro
+            header('Location: ../../../project-academic-php/pages/login/login.html?error=2');
             exit;
         }
     } else {
-        // Se os campos do formulário estiverem vazios, redireciona para a página de login
-        header('Location: ../../../project-academic-php/pages/login/login.html');
+        // Se os campos do formulário estiverem vazios, redireciona para a página de login com uma mensagem de erro
+        header('Location: ../../../project-academic-php/pages/login/login.html?error=3');
         exit;
     }
 ?>
