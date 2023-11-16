@@ -30,7 +30,7 @@ Make sure to perform these steps to ensure the database is properly configured b
 
 ### Under Development
 
-We're continuously enhancing the Barber Appointment System to handle exceptional cases such as previously scheduled dates and times, users with the same email, among others. We are actively working on refining these aspects to ensure a more robust system.
+We're continuously enhancing the Project to handle exceptional cases such as previously scheduled dates and times, users with the same email, among others. We are actively working on refining these aspects to ensure a more robust system.
 
 We are still in the process of improving the system to address all exceptional cases, aiming to deliver a consistent and reliable user experience.
 
@@ -83,7 +83,7 @@ Certifique-se de executar essas etapas para garantir que o banco de dados esteja
 
 ### Em Desenvolvimento
 
-Estamos continuamente aprimorando o Sistema de Agendamento de Barbearia para lidar com casos excepcionais, como datas e horários já agendados, usuários com o mesmo e-mail, entre outros. Estamos trabalhando ativamente para aprimorar esses aspectos, visando um sistema mais robusto.
+Estamos continuamente aprimorando o Projeto para lidar com casos excepcionais, como datas e horários já agendados, usuários com o mesmo e-mail, entre outros. Estamos trabalhando ativamente para aprimorar esses aspectos, visando um sistema mais robusto.
 
 Ainda estamos no processo de melhoria do sistema para lidar com todos os casos excepcionais, com o objetivo de oferecer uma experiência de usuário consistente e confiável.
 
