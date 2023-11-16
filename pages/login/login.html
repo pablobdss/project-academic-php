@@ -41,7 +41,26 @@
             
         </form>
     </div>
-    <script src="../../js/login.js"></script>
     <script src="../../js/home.js"></script>
+    <script>
+        // Função para ler os parâmetros da URL
+        function getParameterByName(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Verifica se há parâmetro 'error' na URL
+        const errorParam = getParameterByName('error');
+
+        // Exibe mensagens de erro com base no parâmetro 'error'
+        const errorMessageDiv = document.getElementById('errorMessage');
+        if (errorParam === '1') {
+            errorMessageDiv.textContent = 'Credenciais incorretas. Por favor, verifique seu e-mail e senha.';
+        } else if (errorParam === '2') {
+            errorMessageDiv.textContent = 'Ocorreu um erro na preparação da declaração SQL.';
+        } else if (errorParam === '3') {
+            errorMessageDiv.textContent = 'Por favor, preencha todos os campos.';
+        }
+    </script>
 </body>
 </html>
