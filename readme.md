@@ -35,13 +35,26 @@ Para configurar o banco de dados MySQL utilizando o XAMPP:
 
 These instructions will help users set up the MySQL database using XAMPP for your barber appointment system.
 
-## Installation
+## Database Setup
 
-[Installation instructions go here]
+The SQL file to set up the database is included in the `database` folder of this project.
 
-## Usage
+To configure the database:
+1. Navigate to the `database` folder.
+2. Use a database management system (e.g., phpMyAdmin) to import the SQL file [db_studio.sql](SQL/db_studio.sql) into your database.
+3. Configure the database connection settings in the [db_conn.php](php/db_conn.php) file.
 
-[Usage Information Goes Here]
+## Configuração do Banco de Dados
+
+O arquivo SQL para configurar o banco de dados está incluído na pasta `database` deste projeto.
+
+Para configurar o banco de dados:
+1. Navegue até a pasta `database`.
+2. Utilize um sistema de gerenciamento de banco de dados (ex: phpMyAdmin) para importar o arquivo SQL [db_studio.sql](SQL/db_studio.sql) para o seu banco de dados.
+3. Configure as informações de conexão com o banco de dados no arquivo [db_conn.php](php/db_conn.php).
+
+Certifique-se de executar essas etapas para garantir que o banco de dados esteja configurado corretamente antes de usar o projeto.
+
 
 ## Contributing
 
