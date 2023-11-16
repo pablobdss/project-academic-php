@@ -6,22 +6,39 @@ function verificarAutenticacao() {
     fetch('../../php/verifica_autenticacao.php')
         .then(response => response.json())
         .then(data => {
-            // Se o usuário não estiver autenticado, redirecione para a página de login
+            console.log("olaa")
             if (!data.isAuthenticated) {
                 window.location.href = '../../pages/login/login.html';
             } else {
-                // Mostra o conteúdo protegido
-                mostrarConteudoAutenticado();
+                mostrarConteudoAutenticado(); // Mostra o conteúdo autenticado
+                atualizarMenu(true); // Atualiza o menu com autenticação verdadeira
             }
         })
+        .catch(error => {
+            console.error('Erro na verificação de autenticação:', error);
+        });
 }
 
-// Função para mostrar o conteúdo autenticado usando jQuery
 function mostrarConteudoAutenticado() {
-    $('#conteudoProtegido').show();
+    $('#conteudoProtegido').show(); // Mostra o conteúdo autenticado
 }
 
-// Chama a função de verificação quando a página é carregada
+function atualizarMenu(isAuthenticated) {
+    if (isAuthenticated) {
+        $('#cadastroLink, #loginLink').hide();
+        $('#menuLink').show();
+    } else {
+        $('#cadastroLink, #loginLink').show();
+        $('#menuLink').hide();
+    }
+}
+
 $(function () {
     verificarAutenticacao();
 });
+
+// Função para fazer logout
+function logout() {
+    // Redirecione para o arquivo de logout
+    window.location.href = '../../php/logout.php';
+}
