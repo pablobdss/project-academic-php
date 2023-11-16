@@ -8,7 +8,7 @@ This project aims to create a system for managing appointments at a barbershop. 
 
 - **Appointment Scheduling**: Users can schedule appointments for haircuts and beard trimming.
 - **View Appointments**: Users can view their scheduled appointments.
-- **Edit and Cancel Appointments**: Users can modify or cancel existing appointments.
+- **Edit and Cancel Appointments**: Users can modify or cancel existing appointments. (The edit functionality is still under development.)
 - **Authentication**: Login and registration functionality for users.
 
 ## Database (MySQL) Configuration
@@ -53,7 +53,7 @@ Este projeto tem como objetivo criar um sistema para gerenciar agendamentos em u
 
 - **Agendamento de Compromissos**: Os usuários podem agendar compromissos para cortes de cabelo e aparos de barba.
 - **Visualizar Agendamentos**: Os usuários podem ver seus agendamentos.
-- **Editar e Cancelar Agendamentos**: Os usuários podem modificar ou cancelar agendamentos existentes.
+- **Editar e Cancelar Agendamentos**: Os usuários podem modificar ou cancelar agendamentos existentes. (A funcionalidade editar ainda está em desenvolvimento)
 - **Autenticação**: Funcionalidade de login e registro para usuários.
 
 ## Configuração do Banco de Dados (MySQL)
