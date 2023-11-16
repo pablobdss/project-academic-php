@@ -8,8 +8,7 @@
     <title>Menu</title>
 </head>
 <body>
-    <!-- Conteúdo que será exibido apenas se o usuário estiver autenticado -->
-    <div id="conteudoProtegido" class="escondido">
+    <div id="conteudoProtegido">
         <header>
             <div id="menu-toggle" onclick="toggleMenu()">☰</div>
             <div id="menu" onclick="closeMenu()">
@@ -31,13 +30,12 @@
                 <h1>Quais são os planos para hoje?</h1>
                 <ul>
                     <li> <a href="../agendamento/agendamento.html">Realizar Agendamento</a></li> <br> <br>
-                    <li> <a href="../perfil/perfil.html">Verificar Perfil</a></li>
+                    <li> <a href="../perfil/perfil.html">Verificar Agendamentos</a></li>
             </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../js/verifica_login.js"></script>
-    <script src="../../js/logout.js"></script>
     <script src="../../js/home.js"></script>
 </body>
 </html>
