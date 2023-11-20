@@ -4,22 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela Inicial da Barbearia</title>
+    <link rel="icon" href="assets\imgs\icone.png" type="image/png">
+    <title>The Grooming Studio</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <div id="menu-toggle" onclick="toggleMenu()">☰</div>
-        <div id="menu" onclick="closeMenu()">
-            <a href="index.html">Página Inicial</a>
-            <a href="pages/cadastro/cadastro.html" id="cadastroLink">Fazer Cadastro</a>
-            <a href="pages/login/login.html" id="loginLink">Fazer Login</a>
-            <a href="pages/menu/menu.html" id="menuLink">Menu</a> 
-        </div>
         <div id="logo">
-            <img src="assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img">
+            <img src="assets\imgs\LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img">
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="index.html" id="paginaInicial" class="menu-link">HOME</a></li>
+                <li><a href="pages/cadastro/cadastro.html" id="cadastroLink" class="menu-link">CADASTRO</a></li>
+                <li><a href="pages/login/login.html" id="loginLink" class="menu-link">LOGIN</a></li>
+                <li><a href="pages/menu/menu.html" id="menuLink" class="menu-link">MENU</a></li>
+            </ul>
         </div>
     </header>
 
@@ -37,7 +39,7 @@
     <section id="pagina-inicial">
         <div>
             <h2>Bem-vindo ao The Grooming Studio.</h2>
-                        <p>O seu destino premium para cuidados com a barba e cabelo. Aqui, a arte da barbearia se encontra com a modernidade, proporcionando uma experiência única para homens que valorizam sua aparência. Nossa equipe de especialistas em estilo está pronta para transformar cada visita em um ritual de cuidados personalizado, onde a atenção aos detalhes é a chave.</p>
+            <p>O seu destino premium para cuidados com a barba e cabelo. Aqui, a arte da barbearia se encontra com a modernidade, proporcionando uma experiência única para homens que valorizam sua aparência. Nossa equipe de especialistas em estilo está pronta para transformar cada visita em um ritual de cuidados personalizado, onde a atenção aos detalhes é a chave.</p>
         </div>
     </section>
 
@@ -48,6 +50,6 @@
         </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="js/home.js"> </script>
+    <script src="js/home.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* Formulário de entrada */
 .input-field {
   width: 100%;
   padding: 8px;
@@ -8,7 +9,7 @@
   box-sizing: border-box;
 }
 
-/* Estilize o botão */
+/* Botão de envio */
 .submit-button {
   background-color: #8b8b8b;
   color: white;
@@ -20,8 +21,8 @@
   width: 100%;
 }
 
-/* css da homepage */
-
+/* Estilos da página inicial */
+/* Geral */
 body {
   margin: 0;
   padding: 0;
@@ -35,86 +36,124 @@ body {
   width: 100%;
 }
 
+/* Cabeçalho */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
   position: relative;
   padding: 0px;
   background-color: #000000;
   height: 100px;
-  margin-top: 0;
   overflow-x: hidden;
   box-sizing: border-box;
 }
 
+/* Logotipo */
 #logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-#logo img {
-  max-width: 15%;
+#logo img.logo-img {
+  width: 180px;
   height: auto;
-  margin-right: 10px;
+  margin-left: 50px;
 }
 
-/* header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  background-color: #000000;
-  height: 100px;
-  margin-top: 0;
-  width: 100%;
-} */
-
-/* #logo {
-  flex-grow: 1;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
-
-/* #logo img{
-  max-width: 15%;
-  width: auto;
-  height: auto;
-  display: block;
-  margin: auto;
-} */
+/* Menu */
+#menu-toggle {
+  display: none;
+}
 
 #menu {
-  display: none;
-  flex-direction: column;
-  align-items: flex-start;
-  position: fixed;
-  top: 100px;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 20px;
-  width: 200px;
-  z-index: 1;
+  cursor: pointer;
 }
 
+#menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#menu li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+#menu button {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Links do menu */
 #menu a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+#menu a:hover {
+  text-decoration: underline;
+}
+
+/* Novos estilos para links específicos */
+#menu a#paginaInicial,
+#menu a#cadastroLink,
+#menu a#loginLink,
+#menu a#menuLink {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+#menu a#paginaInicial:hover,
+#menu a#cadastroLink:hover,
+#menu a#loginLink:hover,
+#menu a#menuLink:hover {
+  text-decoration: none;
+}
+
+#menu a#paginaInicial {
+  padding: 0;
+  margin: 0;
+  background: none;
+}
+
+#menu a#paginaInicial.menu-link,
+#menu a#cadastroLink.menu-link,
+#menu a#loginLink.menu-link,
+#menu a#menuLink.menu-link {
+  text-decoration: none;
+  color: white;
+}
+
+#menu a#paginaInicial.menu-link:hover,
+#menu a#cadastroLink.menu-link:hover,
+#menu a#loginLink.menu-link:hover,
+#menu a#menuLink.menu-link:hover {
+  text-decoration: none;
+}
+
+.menu-link {
   color: white;
   text-decoration: none;
-  margin-bottom: 10px;
-  font-weight: bold;
-  display: block;
+  margin: 0 15px;
+  padding: 10px 0;
+  transition: color 0.3s ease;
 }
 
-#menu-toggle {
-  cursor: pointer;
-  color: white;
-  font-size: 24px;
-}
+/* Fim dos novos estilos do menu */
 
+/* Outros elementos da página inicial */
 #menu-toggle:hover {
   text-decoration: underline;
 }
@@ -122,6 +161,7 @@ header {
 #menu-right {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 #menu-right a {
@@ -129,6 +169,30 @@ header {
   text-decoration: none;
   margin: 0 10px;
   font-weight: bold;
+  display: inline-block;
+}
+
+#menu-right a.logout {
+  font-family: 'Poppins', sans-serif;
+}
+
+#menu-right a#menu-toggle {
+  display: none;
+}
+
+#menu-right a#cadastroLink,
+#menu-right a#loginLink {
+  display: inline-block;
+}
+
+#menu-right a#menuLink {
+  display: none;
+}
+
+#menu-right.logged-in {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
 #bem-vindos {
@@ -181,7 +245,7 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 0;
   filter: grayscale(0%) brightness(70%) contrast(120%);
 }
 
@@ -190,8 +254,10 @@ header {
   font-weight: bold;
 }
 
-#pagina-inicial p {
+#pagina-inicial p,
+#sobre-nos p {
   font-size: 20px;
+  line-height: 1.5;
 }
 
 #sobre-nos h2 {
@@ -199,16 +265,14 @@ header {
   font-weight: bold;
 }
 
-#sobre-nos p {
-  font-size: 20px;
-}
-
 #pagina-inicial div,
 #sobre-nos div {
+  background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid white;
   padding: 20px;
   max-width: 800px;
   margin: 20px auto;
+  border-radius: 10px;
 }
 
 #pagina-inicial h2,
@@ -218,6 +282,21 @@ header {
   margin: 0;
 }
 
+#pagina-inicial div::after,
+#sobre-nos div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#pagina-inicial div img,
+#sobre-nos div img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Seção geral */
 section {
   height: 100vh;
   display: flex;
@@ -226,15 +305,15 @@ section {
   text-align: center;
 }
 
-/*config do form agendamento*/
-
-.form-container {
-  width: 300px;
+/* Configuração do formulário de agendamento */
+.form-container2 {
+  width: 800px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: black;
+  text-align: center;
 }
 
 form {
@@ -281,7 +360,7 @@ button:hover {
 }
 
 #tabelaAgendamentos th {
-  background-color: #4CAF50;
+  background-color: rgb(54, 54, 54); /*cor fundo tabela*/
   color: white;
 }
 
@@ -294,7 +373,7 @@ button:hover {
   border: none;
   cursor: pointer;
   font-size: 16px;
-  color: #3498db;
+  color: #fffbfb; /*cor dos botoes remarcar e cancelar*/
 }
 
 #tabelaAgendamentos button i {
@@ -308,9 +387,8 @@ button:hover {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  border: 2px solid white;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0); 
 }
 
 #agendamentos-container h2 {
@@ -324,6 +402,35 @@ button:hover {
   margin: 0;
 }
 
+select {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+select option {
+  font-family: 'Poppins', sans-serif;
+}
+
+input[type="date"] {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+input[type="date"] option {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos do modal */
 .modal {
   display: none;
   position: fixed;
@@ -340,7 +447,7 @@ button:hover {
   background-color: rgba(0, 0, 0, 0.7);
   margin: 15% auto;
   padding: 2%;
-  border: 1px solid #888;
+  border: 1px solid #0e0e0e;
   width: 20%;
 }
 
@@ -350,24 +457,23 @@ button:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Adicionando transição para suavizar a mudança de cor */
-
+  transition: background-color 0.3s;
 }
 
 .modal-content button:hover {
-  background-color: #2980b9; /* Alterando a cor ao passar o mouse sobre os botões "Sim" e "Não" */
-  color: white; /* Alterando a cor do texto ao passar o mouse sobre os botões "Sim" e "Não" */
+  background-color: #313131;
+  color: white;
 }
 
-/* config menu */
-
+/* Configuração do menu */
 .form-container {
-  width: 300px;
+  width: 500px;
   margin: 50px auto;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: black;
+  text-align: center;
 }
 
 form {
@@ -385,6 +491,22 @@ select {
   margin-bottom: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+.agendamento-button {
+  font-family: 'Poppins', sans-serif;
+  background-color: #808080;
+  color: #ffffff;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.agendamento-button:hover {
+  background-color: #606060;
 }
 
 button {
@@ -409,7 +531,6 @@ button:hover {
   transition: background-color 0.3s ease;
 }
 
-
 .button {
   background-color: #585e65;
   color: white;
@@ -428,8 +549,8 @@ button:hover {
   border-radius: 5px;
 }
 
-.form-container {
-  text-align: center;
+.logout:hover {
+  background-color: #4a4a4a;
 }
 
 ul {
@@ -453,6 +574,5 @@ a {
 }
 
 a:hover {
-  background-color: #2980b9;
+  background-color: #3e3e3e;
 }
-

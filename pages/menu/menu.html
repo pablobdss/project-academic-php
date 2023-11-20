@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="..\..\assets\imgs\icone.png" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>Menu</title>
+    <title>Menu - The Grooming Studio</title>
 </head>
 <body>
     <div id="conteudoProtegido">
+
         <header>
-            <div id="menu-toggle" onclick="toggleMenu()">☰</div>
-            <div id="menu" onclick="closeMenu()">
-                <a href="../../index.html">Página Inicial</a>
-                <a href="../menu/menu.html">Menu</a> 
-            </div>
             <div id="logo">
                 <img src="../../assets/imgs/LOGODEITADA.png" alt="Logo da Barbearia" class="logo-img">
             </div>
-            
-            <div id="menu-right">
-                <button type="button" name="logout" class="logout" onclick="logout()">Logout</button>
+            <div id="menu">
+                <ul>
+                    <li><a href="../../index.html" id="paginaInicial" class="menu-link">HOME</a></li>
+                    <li><a href="../menu/menu.html" id="menuLink" class="menu-link">MENU</a></li>
+                    <li><button type="button" name="logout" id="logout" class="logout menu-link" onclick="logout()">LOGOUT</button></li>
+                </ul>
             </div>
         </header>
             <div class="form-container">
                 <h1>Quais são os planos para hoje?</h1>
                 <ul>
-                    <li> <a href="../agendamento/agendamento.html">Realizar Agendamento</a></li> <br> <br>
-                    <li> <a href="../perfil/perfil.html">Verificar Agendamentos</a></li>
+                    <li> <a href="../agendamento/agendamento.html">REALIZAR AGENDAMENTO</a></li> <br> <br>
+                    <li> <a href="../perfil/perfil.html">VERIFICAR AGENDAMENTOS</a></li>
             </div>
-        </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="js/home.js"> </script>
     <script src="../../js/verifica_login.js"></script>
-    <script src="../../js/home.js"></script>
 </body>
 </html>
