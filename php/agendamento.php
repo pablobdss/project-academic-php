@@ -16,7 +16,6 @@ if (isset($_POST['submit_agendamento'])) {
     $barba_esc = mysqli_real_escape_string($conexao, $_POST['tipos_barbas']);
 
     // Inicia a sessão se ainda não foi iniciada e obtém o ID do usuário da sessão
-    session_start();
     $user_id = $_SESSION['id'];
 
     // Verifica se já existe um agendamento para essa data e hora
@@ -62,13 +61,11 @@ if (isset($_POST['submit_agendamento'])) {
     $conexao->close(); // Fecha a conexão com o banco de dados
 } else {
     $response['success'] = false;
-    $response['error'] = 'Formulário não submetido corretamente.';
+    $response['error'] = 'Formulario nao submetido corretamente.';
 }
 
 // Define o cabeçalho como JSON e retorna a resposta
 header('Content-Type: application/json');
 echo json_encode($response);
 exit;
-
-
 ?>
