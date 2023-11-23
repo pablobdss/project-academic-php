@@ -1,7 +1,7 @@
 $(function() {
     // Faz a requisição AJAX para verificar a autenticação
     $.ajax({
-        url: '../project-academic-php/php/verifica_autenticacao.php',
+        url: '../../php/verifica_autenticacao.php',
         type: 'GET',
         dataType: 'json',
         success: function(response) {
