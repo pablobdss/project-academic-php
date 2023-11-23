@@ -41,27 +41,68 @@
             </div>
         </div>
 
-        <div id="myRescheduleModal" class="modal">
+        <div id="confirmRescheduleModal" class="modal">
             <div class="modal-content">
                 <p>Deseja realizar uma remarcação?</p>
-                <button id="rescheduleOpen">Sim</button>
-                <button id="rescheduleClose">Não</button>
+                <button id="rescheduleYes">Sim</button>
+                <button id="rescheduleNo">Não</button>
             </div>
         </div>
 
         <div id="cancelModal" class="modal">
             <div class="modal-content">
                 <p>Deseja realmente prosseguir com o cancelamento?</p>
-                <button id="cancelOpen">Sim</button>
-                <button id="cancelClose">Não</button>
+                <button id="cancelYes">Sim</button>
+                <button id="cancelNo">Não</button>
             </div>
         </div>
+
+        <div id="modalRemarcacao" class="modal">
+            <div class="modal-content">
+                <form id="remarcacaoForm" action="../../php/remarcacao.php" method="post">
+                    <input type="hidden" id="agendamentoId" name="agendamento_id" value="">
+                    <div>
+                        <label for="data">Para qual dia deseja remarcar?</label> <br> <br>
+                        <input type="date" id="remarcao_data" name="remarcao_data">
+                        <br> <br>
+                    </div>
+                
+                    <div>
+                        <div>
+                            <label for="horarios">Qual o horário desejado?</label> <br> <br>
+                            <select id="horarios" name="remarcacao_horarios" required>
+                                
+                            </select>
+                            <br>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <label for="corte_cabelo">Escolha um corte de cabelo:</label> <br> <br>
+                        <select id="tipos_cortes" name="tipos_cortes_remarcacao">
+                            <option value="nenhum">Nenhum</option>
+                        </select>
+                    </div>
+                
+                    <div>
+                        <label for="tipos_barbas">Escolha um estilo de barba:</label> <br> <br>
+                        <select id="tipos_barbas" name="tipos_barbas_remarcacao">
+                            <option value="nenhum">Nenhum</option>
+                        </select>
+                        <br> <br>
+                    </div>
+                
+                    <div>
+                        <button type="submit" name="submit_remarcacao" class="agendamento-button">Remarcar</button>
+                        <button id="returnFormModal" class="agendamento-button">Retornar</button>
+                    </div>
+                </form>
+            </div>
         </div>
         
     </div>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="../../js/verifica_login.js"></script>
     <script src="../../js/perfil.js"></script>
-    <script src="js/home.js"> </script>
 </body>
 </html>
