@@ -11,7 +11,5 @@
     // Verifica se ocorreu algum erro durante a conexão
     if ($conexao->connect_errno) {
         echo "Erro ao conectar ao banco de dados"; // Mensagem exibida se houver um erro na conexão
-    } else {
-        echo "Conexão efetuada com sucesso"; // Mensagem exibida se a conexão for estabelecida com sucesso
-    }
+    } 
 ?>
